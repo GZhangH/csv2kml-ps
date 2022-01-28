@@ -88,6 +88,7 @@ if ($arg_option["file"] -ne $null) {
     } else {
         $lla = @()
         for ($i = 0; $i -lt $data.Count; $i++) {
+            Write-Host ("`r Progress = {0:N} % " -f $($i / $data.Count * 100)) -NoNewline
             $lla += "{0},{1},{2}" -f (
                 $data[$i].("{0}" -f $arg_option["lon"]),
                 $data[$i].("{0}" -f $arg_option["lat"]),

@@ -138,9 +138,9 @@ if ($arg_option["file"] -ne $null) {
 </Document></kml>
 "@
         if ($arg_option['output'] -ne $null) {
-            $kml | Out-File ("{0}" -f $arg_option["output"])
+            $kml | Out-File ("{0}" -f $arg_option["output"]) -Encoding UTF8
         } else {
-            $kml | Out-File output.kml
+            $kml | Out-File output.kml -Encoding UTF8
         }
     }
 } else { continue }
